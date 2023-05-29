@@ -1,5 +1,4 @@
 {
-  
   "files": [],
   "references": [
     {
@@ -9,12 +8,22 @@
   "compilerOptions": {
     "module": "es2020",
     "target": "es2020",
-    "moduleResolution":"node",
+    "moduleResolution": "node",
     "baseUrl": "./", // 解析非相对模块的基地址，默认是当前目录
-    "paths": { //路径映射，相对于baseUrl
-      "@/*": ["src/*"] 
+    "paths": {
+      //路径映射，相对于baseUrl
+      "@/*": ["src/*"]
     },
-    "types": ["element-plus/global","node","vite/client"]
+    "types": ["element-plus/global", "node", "vite/client"]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "pkg/**/*.ts", "pkg/**/*.d.ts", "pkg/**/*.tsx", "pkg/**/*.vue"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "pkg/**/*.ts",
+    "pkg/**/*.d.ts",
+    "pkg/**/*.tsx",
+    "pkg/**/*.vue"
+  ]
 }

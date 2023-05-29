@@ -1,15 +1,13 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div>
-    <h1>SVG测试</h1>
-    <svg style="width:30px;height:30px;">
+    <!-- <h1>SVG测试</h1>
+    <svg style="width: 30px; height: 30px">
       <use xlink:href="#icon-phone" fill="red"></use>
-    </svg>
-  </div>  
+    </svg> -->
+    <RouterView></RouterView>
+  </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

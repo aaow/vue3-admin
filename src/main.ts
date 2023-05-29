@@ -8,23 +8,25 @@ import 'element-plus/dist/index.css'
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 import 'virtual:svg-icons-register'
 
-import gloablComponent from './components/index';
+import gloablComponent from './components/index'
 
 import axios from 'axios'
+import router from './router'
+import pinia from './store';
 axios({
-    url: '/api/user/login',
-    method: "post",
-    data: {
-        username: 'admin',
-        passwird: '111111'
-    }
+  url: '/api/user/login',
+  method: 'post',
+  data: {
+    username: 'admin',
+    passwird: '111111',
+  },
 })
 const app = createApp(App)
 app.use(ElementPlus, {
-    locale: zhCn
+  locale: zhCn,
 })
 app.use(createPinia())
-
-
-app.use(gloablComponent);
+app.use(gloablComponent)
+app.use(router)
+app.use(pinia)
 app.mount('#app')
