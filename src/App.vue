@@ -2,11 +2,7 @@
 
 <template>
   <div>
-    <!-- <h1>SVG测试</h1>
-    <svg style="width: 30px; height: 30px">
-      <use xlink:href="#icon-phone" fill="red"></use>
-    </svg> -->
-    <RouterView></RouterView>
+    <router-view></router-view>
   </div>
 </template>
 

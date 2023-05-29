@@ -12,15 +12,15 @@ import gloablComponent from './components/index'
 
 import axios from 'axios'
 import router from './router'
-import pinia from './store';
-axios({
-  url: '/api/user/login',
-  method: 'post',
-  data: {
-    username: 'admin',
-    passwird: '111111',
-  },
-})
+import pinia from './store'
+// axios({
+//   url: '/api/user/login',
+//   method: 'post',
+//   data: {
+//     username: 'admin',
+//     passwird: '111111',
+//   },
+// })
 const app = createApp(App)
 app.use(ElementPlus, {
   locale: zhCn,
