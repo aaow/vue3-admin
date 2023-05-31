@@ -36,28 +36,28 @@ const login = async () => {
 }
 const validatorUserName = (rule: any, value: any, callback: any) => {
   if (value.length >= 5) {
-    callback();
+    callback()
   } else {
-    callback(new Error('账号长度至少五位'));
+    callback(new Error('账号长度至少五位'))
   }
 }
 
 const validatorPassword = (rule: any, value: any, callback: any) => {
   if (value.length >= 6) {
-    callback();
+    callback()
   } else {
-    callback(new Error('密码长度至少六位'));
+    callback(new Error('密码长度至少六位'))
   }
 }
 const rules = {
   username: [
     // { required: true, min: 6, max: 10, message: '账号长度至少六位', trigger: 'change' }
-    { trigger: 'change', validator: validatorUserName }
+    { trigger: 'change', validator: validatorUserName },
   ],
   password: [
     // { required: true, min: 6, max: 15, message: '密码长度至少6位', trigger: 'change' }
-    { trigger: 'change', validator: validatorPassword }
-  ]
+    { trigger: 'change', validator: validatorPassword },
+  ],
 }
 </script>
 <template>
