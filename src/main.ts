@@ -13,6 +13,7 @@ import gloablComponent from './components/index'
 import axios from 'axios'
 import router from './router'
 import pinia from './store'
+import './permisstion'
 // axios({
 //   url: '/api/user/login',
 //   method: 'post',

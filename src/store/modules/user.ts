@@ -1,9 +1,13 @@
-import { defineStore } from 'pinia';
-import { reqLogin,reqUserInfo, reqLogout } from '@/api/user';
-import type { loginFormData, loginResponseData,userInfoResponseData } from '@/api/user/type';
-import type { UserState } from './types/type';
-import { SET_TOKEN, GET_TOKEN,REMOVE_TOKEN } from '@/utils/token';
-import { constantRoute, asnycRoute, anyRoute } from '@/router/routes';
+import { defineStore } from 'pinia'
+import { reqLogin, reqUserInfo, reqLogout } from '@/api/user'
+import type {
+  loginFormData,
+  loginResponseData,
+  userInfoResponseData,
+} from '@/api/user/type'
+import type { UserState } from './types/type'
+import { SET_TOKEN, GET_TOKEN, REMOVE_TOKEN } from '@/utils/token'
+import { constantRoute, asnycRoute, anyRoute } from '@/router/routes'
 import cloneDeep from 'lodash/cloneDeep'
 import router from '@/router'
 function filterAsyncRoute(asnycRoute: any, routes: any) {
