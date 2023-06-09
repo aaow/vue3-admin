@@ -1,10 +1,6 @@
 import { defineStore } from 'pinia'
 import { reqLogin, reqUserInfo, reqLogout } from '@/api/user'
-import type {
-  loginFormData,
-  loginResponseData,
-  userInfoResponseData,
-} from '@/api/user/type'
+
 import type { UserState } from './types/type'
 import { SET_TOKEN, GET_TOKEN, REMOVE_TOKEN } from '@/utils/token'
 import { constantRoute, asnycRoute, anyRoute } from '@/router/routes'
@@ -32,8 +28,8 @@ let useUserStore = defineStore('User', {
     }
   },
   actions: {
-    async userLogin(data: loginFormData) {
-      let result: loginResponseData = await reqLogin(data)
+    async userLogin(data: any) {
+      let result: any = await reqLogin(data)
       if (result.code == 200) {
         this.token = result.data as string
         SET_TOKEN(result.data as string)
@@ -44,7 +40,7 @@ let useUserStore = defineStore('User', {
     },
     async userInfo() {
       //获取用户信息进行存储仓库当中[用户头像、名字]
-      const result: userInfoResponseData = await reqUserInfo()
+      const result: any = await reqUserInfo()
       //如果获取用户信息成功，存储一下用户信息
       if (result.code == 200) {
         this.username = result.data.name

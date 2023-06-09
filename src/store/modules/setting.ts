@@ -10,4 +10,4 @@ const useLayOutSettingStore = defineStore('SettingStore', {
   },
 })
 
-export default useLayOutSettingStore;
+export default useLayOutSettingStore
